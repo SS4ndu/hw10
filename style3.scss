@@ -1,0 +1,82 @@
+:root {
+    --bg-color: linear-gradient(50deg, rgb(37, 130, 37), blue);
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    width: 50vh;
+    padding: 8px 16px;
+    box-shadow: 0 0 8px gray;
+    background-image: var(--bg-color);
+    background-size: 300%;
+    animation: bg 4s infinite alternate;
+}
+
+@keyframes bg {
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
+
+.title {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.container2 {
+    width: 50vh;
+    padding: 8px 16px;
+    box-shadow: 0 0 8px gray;
+}
+
+@mixin desktop{
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media (min-width: 481px) and (max-width:1023px) {
+        @content;
+    }
+}
+
+@mixin phone{
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+
+
+.title2 {
+    font-weight: 700;
+    text-transform: uppercase;
+    background-image: var(--bg-color);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 200%;
+    animation: bg 2s infinite alternate;
+
+    @include desktop {
+        font-size: 3rem;
+    }
+
+    @include tablet {
+        font-size: 2rem;
+    }
+
+    @include phone {
+        font-size: 1rem;
+    }
+}
