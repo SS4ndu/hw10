@@ -1,0 +1,28 @@
+.boxShadow {
+    width: 200px;
+    height: 200px;
+    margin: 32px 32px;
+    border: 1px solid black;
+    box-shadow: 16px -16px 16px black;
+    transition: 2s;
+}
+
+.boxShadow:hover {
+    transform: scale(1.5);
+    transform: rotate(90deg);
+}
+
+.boxShadow2 {
+    width: 200px;
+    height: 200px;
+    margin: 32px 32px;
+    border: 1px solid black;
+    box-shadow: -16px 16px 16px black;
+    transition: 2s;
+}
+
+.boxShadow2:hover {
+    transform: scale(1.5);
+    transform: rotate(90deg);
+}
+

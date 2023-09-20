@@ -1,0 +1,23 @@
+.spinner {
+    margin: 64px;
+    width: 200px;
+    height: 200px;
+    border: 16px dashed gray;
+    border-radius: 50%;
+    border-bottom: 16px groove blue;
+    border-top: 16px ridge blue;
+    animation: loading 2s linear  infinite;
+}
+
+@keyframes loading {
+0% {
+    transform: rotate(0deg);
+}
+
+50% {
+    transform: rotate(90deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
